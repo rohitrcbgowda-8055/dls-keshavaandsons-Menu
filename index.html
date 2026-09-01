@@ -1,5 +1,10 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html><head><meta charset="utf-8"><link rel="manifest" href="./manifest.webmanifest">
+<meta name="theme-color" content="#db741e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="DLS Keshava & Sons">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#db741e"><title>DLS Keshava & Sons Catering Menu</title>
 <style>
 :root{--o:#db741e;--d:#48271b;--c:#fff9f2;--l:#ead0b8;--s:#fff0df}
@@ -220,4 +225,13 @@ footer{position:fixed;left:0;right:0;bottom:0;background:var(--d);color:#fff;pad
   });
 })();
 </script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('./sw.js').catch(function () {});
+  });
+}
+</script>
+
 </body></html>
