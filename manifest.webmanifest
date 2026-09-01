@@ -1,7 +1,6 @@
 {
   "name": "DLS Keshava & Sons Catering Menu",
   "short_name": "DLS Keshava",
-  "description": "Interactive catering menu for DLS Keshava & Sons.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
