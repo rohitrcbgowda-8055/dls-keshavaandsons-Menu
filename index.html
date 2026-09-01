@@ -92,41 +92,27 @@ footer{position:fixed;left:0;right:0;bottom:0;background:var(--d);color:#fff;pad
   function makeMessage() {
     var boxes = selectedBoxes();
     var d = getDetails();
-    var msg = 'DLS KESHAVA & SONS - CATERING ENQUIRY
-';
-    msg += '--------------------------------
-';
-    msg += 'Customer: ' + d.customer + '
-';
-    msg += 'Event: ' + d.event + '
-';
-    msg += 'Date: ' + d.date + '
-';
-    msg += 'Guests: ' + d.guests + '
-
-';
-    msg += 'SELECTED MENU (' + boxes.length + ' ITEMS)
-';
+    var msg = 'DLS KESHAVA & SONS - CATERING ENQUIRY\n';
+    msg += '--------------------------------\n';
+    msg += 'Customer: ' + d.customer + '\n';
+    msg += 'Event: ' + d.event + '\n';
+    msg += 'Date: ' + d.date + '\n';
+    msg += 'Guests: ' + d.guests + '\n\n';
+    msg += 'SELECTED MENU (' + boxes.length + ' ITEMS)\n';
 
     var lastSection = '';
     for (var i = 0; i < boxes.length; i++) {
       var b = boxes[i];
       var section = b.getAttribute('data-section') || 'Menu';
       if (section !== lastSection) {
-        msg += '
-' + section + '
-';
+        msg += '\n' + section + '\n';
         lastSection = section;
       }
-      msg += '☑ ' + b.value + '
-';
+      msg += '☑ ' + b.value + '\n';
     }
 
-    msg += '
-DLS Keshava & Sons
-';
-    msg += 'Ph: 8105831111
-';
+    msg += '\nDLS Keshava & Sons\n';
+    msg += 'Ph: 8105831111\n';
     msg += '#166 3rd Main, 7th Cross, Chamrajpet, Bengaluru - 560018';
     return msg;
   }
